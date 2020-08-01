@@ -1,0 +1,18 @@
+.nav-bar{ 
+  position: fixed;
+  width: 100%;
+  top: 0;
+  color: #fff;
+  background: #66ccff;
+}
+.nav-bar .search{ 
+  background: #fff; 
+  position: absolute; 
+  border-radius: 50%; 
+  overflow: hidden;
+}
+.nav-bar .title{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0)
+}

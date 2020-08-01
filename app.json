@@ -1,0 +1,22 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "usingComponents": {
+    "van-dialog": "miniprogram_npm/vant-weapp/dialog/index",
+    "van-button": "miniprogram_npm/vant-weapp/button/index",
+    "van-field": "miniprogram_npm/vant-weapp/field/index",
+    "van-popup": "miniprogram_npm/vant-weapp/popup/index",
+    "van-swipe-cell": "miniprogram_npm/vant-weapp/swipe-cell/index",
+    "van-icon": "miniprogram_npm/vant-weapp/icon/index",
+    "van-notify": "miniprogram_npm/vant-weapp/notify/index",
+    "van-action-sheet": "miniprogram_npm/vant-weapp/action-sheet/index",
+    "van-search": "miniprogram_npm/vant-weapp/search/index",
+    "van-grid": "miniprogram_npm/vant-weapp/grid/index",
+    "van-grid-item": "miniprogram_npm/vant-weapp/grid-item/index",
+    "van-tag": "miniprogram_npm/vant-weapp/tag/index"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
