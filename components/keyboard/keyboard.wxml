@@ -1,0 +1,99 @@
+<!--components/keyboard.wxml-->
+<van-popup
+    show="{{ show }}"
+    position="bottom"
+    bind:close="onClose"
+    overlay="{{false}}"
+    custom-style="background:#BBC2CA;font-size:40rpx;"
+  >
+    <text class="clearInput" bindtap="clearInput">清空</text>
+    <text class="complete" bindtap="inputComplete">完成</text>
+    <view class="keyboard">
+      <view wx:if="{{showCnKeyBoard}}" class="keyboard_content">
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="京">京</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="津">津</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="冀">冀</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="鲁">鲁</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="晋">晋</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="蒙">蒙</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="辽">辽</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="吉">吉</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="黑">黑</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="沪">沪</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="苏">苏</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="浙">浙</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="皖">皖</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="闽">闽</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="赣">赣</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="豫">豫</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="鄂">鄂</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="湘">湘</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="粤">粤</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="桂">桂</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="渝">渝</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="川">川</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="贵">贵</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="云">云</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="藏">藏</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="陕">陕</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="甘">甘</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="青">青</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="琼">琼</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="新">新</button>
+        <button class="key_btn change normalWidth" bindtap="changeKeyBoard">ABC</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="宁">宁</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="港">港</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="澳">澳</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="台">台</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="警">警</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="领">领</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="使">使</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="临">临</button>
+        <button class="key_btn delete normalWidth" bindtap="delCarlicense">
+            <image src="/images/del.png" alt />
+        </button>
+      </view>
+      <view wx:else class="keyboard_content">
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="1">1</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="2">2</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="3">3</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="4">4</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="5">5</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="6">6</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="7">7</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="8">8</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="9">9</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="0">0</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="Q">Q</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="W">W</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="E">E</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="R">R</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="T">T</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="Y">Y</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="U">U</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="I">I</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="O">O</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="P">P</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="A">A</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="S">S</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="D">D</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="F">F</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="G">G</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="H">H</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="J">J</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="K">K</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="L">L</button>
+        <button class="key_btn change" bindtap="changeKeyBoard">ABC</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="Z">Z</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="X">X</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="C">C</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="V">V</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="B">B</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="N">N</button>
+        <button class="key_btn" bindtap="onKeyBoardPress" data-text="M">M</button>
+        <button class="key_btn delete" bindtap="delCarlicense">
+            <image src="/images/del.png" alt />
+        </button>
+      </view>
+    </view>
+  </van-popup>

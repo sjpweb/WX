@@ -5,6 +5,7 @@ const app = getApp()
 Page({
   data: {
     navBarHeight: app.globalData.navBarHeight,
+    swiperCurrent:0,
     carList: [
       {
         carNum: '京A88888',
@@ -22,7 +23,31 @@ Page({
       },
       {
         carNum: '京A88888',
+        type: 2,
+        state: 0,
+        entranceTimer: '2020年07月15日 17:00:00',
+        stopTimer: '0天1小时'
+      },
+      {
+        carNum: '京A88888',
+        type: 3,
+        state: 0,
+        entranceTimer: '2020年07月15日 17:00:00',
+        stopTimer: '0天1小时'
+      },
+      {
+        carNum: '京A88888',
+        type: 4,
+        state: 0,
+        entranceTimer: '2020年07月15日 17:00:00',
+        stopTimer: '0天1小时'
+      },
+      {
+        carNum: '京A88888',
         state: 1,
+      },
+      {
+        carNum: null,
       }
     ],
     indicatorDots: false,
@@ -32,16 +57,20 @@ Page({
     duration: 500,
     value: '',
   },
-  //事件处理函数
-  bindViewTap: function() {
+  click: function() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../addcar/addcar'
     })
   },
   onSearch: function(e) {
     this.setData({
       value: e.detail
     });
+  },
+  swiperChange: function(e) {
+    this.setData({
+      swiperCurrent: e.detail.current
+    })
   },
   onCancel: function(e) {
     this.setData({

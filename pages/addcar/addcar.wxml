@@ -1,0 +1,23 @@
+<!--pages/addcar/addcar.wxml-->
+  <van-notify id="van-notify" />
+<van-dialog id="van-dialog" />
+<view class="bind_car_wrap">
+  <view class="wrap">
+    <view class="search_title">请输入车牌号</view>
+    <view class="new_energy_car">
+      <text bindtap="showCnKeyBoardClick" class="{{init?'twinkling': ''}}">{{carlicenseArr[0] ? carlicenseArr[0] : ''}}</text>
+      <text bindtap="showKeyBoard">{{carlicenseArr[1] ? carlicenseArr[1] : ''}}</text>
+      <text bindtap="showKeyBoard">{{carlicenseArr[2] ? carlicenseArr[2] : ''}}</text>
+      <text bindtap="showKeyBoard">{{carlicenseArr[3] ? carlicenseArr[3] : ''}}</text>
+      <text bindtap="showKeyBoard">{{carlicenseArr[4] ? carlicenseArr[4] : ''}}</text>
+      <text bindtap="showKeyBoard">{{carlicenseArr[5] ? carlicenseArr[5] : ''}}</text>
+      <text bindtap="showKeyBoard">{{carlicenseArr[6] ? carlicenseArr[6] : ''}}</text>
+      <text wx:if="{{newEnergyCar}}" bindtap="showKeyBoard" style="color:#16AF99">{{carlicenseArr[7] ? carlicenseArr[7] : ''}}</text>
+      <text wx:else style="color:#16AF99" bindtap="changeCarType">新</text>
+    </view>
+
+    <van-button disabled="{{!carlicenseArr.length}}" class="search" custom-style="font-family: PingFang-SC-Bold, PingFang-SC, sans-serif;margin-top: 80rpx;border-radius: 8rpx;" bind:click="bindCar" type="primary" size="large" color="#16AF99">立即绑定</van-button>
+  </view>
+
+  <keyboard show="{{showKeyBoard}}" showCnKeyBoard="{{showCnKeyBoard}}" bind:key-press="keyPress" bind:del-press="delPress" bind:clear-press="clearPress" />
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "新增车牌",
+  "usingComponents": {
+    "keyboard": "/components/keyboard/keyboard"
+  }
+}

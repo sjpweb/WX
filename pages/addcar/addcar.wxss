@@ -1,0 +1,46 @@
+/* pages/addcar/addcar.wxss *//* pages/addcar/addcar.wxss */
+/* page{
+  width: 654rpx;
+  padding: 0 48rpx;
+} */
+
+.wrap {
+  width: 100%;
+  padding: 0 48rpx;
+  padding-top: 80rpx;
+  font-size: 32rpx;
+  box-sizing: border-box;
+  background: white;
+  text-align: center;
+}
+.wrap .search_title {
+  font-family: PingFang-SC-Bold, PingFang-SC, sans-serif;
+  text-align: center;
+  height: 44rpx;
+  font-size: 44rpx;
+  font-weight: bold;
+  color: #000000;
+  line-height: 44rpx;
+}
+.wrap .new_energy_car {
+  height: 100rpx;
+  border-radius: 10rpx;
+  margin-top: 160rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.wrap .new_energy_car text {
+  font-size: 44rpx;
+  display: block;
+  width: 64rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-bottom: 1px solid #0cadb1;
+}
+.wrap .search {
+  font-family: PingFang-SC-Bold, PingFang-SC, sans-serif;
+  border-radius: 8rpx;
+}
+

@@ -1,0 +1,66 @@
+/* components/keyboard.wxss */
+
+.complete {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 20rpx;
+  font-size: 36rpx;
+  line-height: 64rpx;
+  color: #0078ff;
+}
+
+.clearInput {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20rpx;
+  font-size: 36rpx;
+  line-height: 64rpx;
+  color: #0078ff;
+}
+
+.keyboard {
+  position: relative;
+  background: #d2d5db;
+  margin-top: 64rpx;
+}
+
+.keyboard_content {
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.keyboard_content .key_btn {
+  font-family: PingFangSC-Regular, PingFang SC, sans-serif;
+  font-size: 40rpx;
+  color: #030303;
+  width: 66rpx;
+  margin: 12rpx 5rpx;
+  height: 84rpx;
+  border-radius: 10rpx;
+  padding: 0;
+  padding-top: 12rpx;
+}
+
+.keyboard_content .change, .keyboard_content .delete {
+  font-family: SFProText-Regular, SFProText, sans-serif;
+  font-weight: 400;
+  width: 100rpx;
+  background: #bbc2ca;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  padding-top: 22rpx;
+}
+
+.keyboard_content .normalWidth{
+  width: 66rpx;
+}
+
+.keyboard_content .delete image {
+  width: 52rpx;
+  height: 40rpx;
+}

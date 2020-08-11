@@ -1,8 +1,15 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/addcar/addcar",
+    "pages/expense/expense"
   ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#66ccff",
+    "navigationBarTextStyle": "white"
+  },
   "usingComponents": {
     "van-dialog": "miniprogram_npm/vant-weapp/dialog/index",
     "van-button": "miniprogram_npm/vant-weapp/button/index",

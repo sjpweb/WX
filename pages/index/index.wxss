@@ -17,6 +17,18 @@
   position: relative;
   font-size: 20rpx;
 }
+.container swiper .swiper-item .item .van-icon{
+  margin-right: 10rpx;
+}
+.container swiper .swiper-item .item .set{
+  float: right;
+  color: #66ccff;
+}
+.container swiper .swiper-item .item .set .van-icon{
+  font-size: 24rpx;
+  position: relative;
+  top: 9rpx;
+}
 .container swiper .swiper-item .item .carNum{
   font-size: 40rpx;
 }
@@ -35,6 +47,35 @@
   line-height: 240rpx;
   color: #66ccff;
   font-size: 40rpx;
+}
+.swiper-container {
+  position: relative;
+  height: 300rpx;
+}
+.swiper-container .active {
+  transform: scale(1.14);
+  transition: all 0.2s ease-in 0s;
+  z-index: 20;
+}
+.swiper-container .dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10rpx;
+  display: flex;
+  justify-content: center;
+}
+.swiper-container .dots .dot {
+  margin: 0 8rpx;
+  width: 14rpx;
+  height: 14rpx;
+  background-color: #ccc;
+  border-radius: 8rpx;
+  transition: all 0.6s ease-in-out;
+}
+.swiper-container .dots .dot.active {
+  width: 30rpx;
+  background: #fff;
 }
 .van-grid{
   width: 94%;

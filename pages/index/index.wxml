@@ -5,39 +5,49 @@
    value="{{ value }}"
    shape="round"
    background="rgba(0,0,0,0)"
-   bind:change="onSearch"
-   bind:clear="onCancel"
    placeholder="请输入搜索关键词"/>
-  <swiper indicator-dots="{{indicatorDots}}"
-    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{carList}}" wx:key="index">
-      <swiper-item>
-        <view class="swiper-item">
-          <view class="item">
-            <text class="carNum">{{item.carNum}}</text>
-            <van-tag
-              round
-              wx:if="{{item.type != undefined}}"
-              type="{{['warning','primary'][item.type]}}">
-              {{['临停车辆','月租车辆'][item.type]}}
-            </van-tag>
+   <view class="swiper-container">
+    <swiper indicator-dots="{{indicatorDots}}"
+      current='0'
+      bindchange='swiperChange'
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{carList}}" wx:key="index">
+        <swiper-item wx:if="{{item.carNum}}" id='{{index}}'>
+          <view class="swiper-item">
+            <view class="item">
+              <text class="carNum">{{item.carNum}}</text>
+              <van-tag
+                round
+                wx:if="{{item.type != undefined}}"
+                color="{{['#f2826a','#7232dd','#7232dd','#ffe1e1','#ad0000'][item.type]}}">
+                {{['临停车辆','月租车辆','月租临停','免费车辆','商户车辆'][item.type]}}
+              </van-tag>
+            </view>
+            <view class="item"><van-icon name="gold-coin-o" color="#66ccff"/> <text style="color: #66ccff;">{{['车辆在场','暂未查询到入场信息'][item.state]}}</text></view>
+            <view class="item" wx:if="{{item.entranceTimer}}"><van-icon name="passed" color="#66ccff"/><text>入场时间：{{item.entranceTimer}}</text></view>
+            <view class="item" wx:if="{{item.monthlyTimer}}">
+              <van-icon name="play-circle-o" color="#66ccff"/><text>月租到期时间：{{item.monthlyTimer}}</text>
+              <view wx:if="{{item.carNum}}" class="set">{{['月租续费','临停缴费','管理车辆'][item.type]}}<van-icon name="arrow" /></view>
+            </view>
+            <view class="item" wx:if="{{item.stopTimer}}">
+              <van-icon name="close" color="#66ccff"/><text>已停时长：{{item.stopTimer}}</text>
+              <view wx:if="{{item.carNum}}" class="set">{{['月租续费','临停缴费','管理车辆'][item.type]}}<van-icon name="arrow" /></view>
           </view>
-          <view class="item"><van-icon name="gold-coin-o" color="#66ccff"/> <text>{{['车辆在场','暂未查询到入场信息'][item.state]}}</text></view>
-          <view class="item" wx:if="{{item.entranceTimer}}"><van-icon name="passed" color="#66ccff"/><text>入场时间：{{item.entranceTimer}}</text></view>
-          <view class="item" wx:if="{{item.monthlyTimer}}"><van-icon name="play-circle-o" color="#66ccff"/><text>月租到期时间：{{item.monthlyTimer}}</text></view>
-          <view class="item" wx:if="{{item.stopTimer}}"><van-icon name="close" color="#66ccff"/><text>已停时长：{{item.stopTimer}}</text></view>
-          <view class="set"></view>
-        </view>
-      </swiper-item>
-    </block>
-    <block>
-      <swiper-item>
-        <view class="swiper-item addCar">
-          <text>+ 添加车牌</text>  
-        </view>
-      </swiper-item>
-    </block>
-  </swiper>
+          </view>
+        </swiper-item>
+        <swiper-item wx:else>
+          <view class="swiper-item addCar" bindtap="click">
+            <text>+ 添加车牌</text>  
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots">
+      <block wx:for="{{carList}}" wx:key="index">
+        <view class='dot {{swiperCurrent == index ? "active" : ""}}'></view>
+      </block>
+    </view>
+  </view> 
   <van-grid column-num="2">
     <van-grid-item use-slot>
       <image src="/images/moth.png" alt />
