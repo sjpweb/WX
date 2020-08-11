@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/addcar/addcar",
-    "pages/expense/expense"
+    "pages/expense/expense",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",

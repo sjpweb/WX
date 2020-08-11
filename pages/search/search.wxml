@@ -1,0 +1,44 @@
+<!--pages/addcar/addcar.wxml-->
+  <van-notify id="van-notify" />
+<van-dialog id="van-dialog" />
+<view class="bind_car_wrap" hidden="{{!isShow}}">
+  <view class="wrap">
+    <view class="search_title">请输入需要查询的车牌号</view>
+    <view class="new_energy_car">
+      <text bindtap="showCnKeyBoardClick" class="{{init?'twinkling': ''}}">{{carlicenseArr[0] ? carlicenseArr[0] : ''}}</text>
+      <text bindtap="showKeyBoard">{{carlicenseArr[1] ? carlicenseArr[1] : ''}}</text>
+      <text bindtap="showKeyBoard">{{carlicenseArr[2] ? carlicenseArr[2] : ''}}</text>
+      <text bindtap="showKeyBoard">{{carlicenseArr[3] ? carlicenseArr[3] : ''}}</text>
+      <text bindtap="showKeyBoard">{{carlicenseArr[4] ? carlicenseArr[4] : ''}}</text>
+      <text bindtap="showKeyBoard">{{carlicenseArr[5] ? carlicenseArr[5] : ''}}</text>
+      <text bindtap="showKeyBoard">{{carlicenseArr[6] ? carlicenseArr[6] : ''}}</text>
+      <text wx:if="{{newEnergyCar}}" bindtap="showKeyBoard" style="color:#66ccff">{{carlicenseArr[7] ? carlicenseArr[7] : ''}}</text>
+      <text wx:else style="color:#66ccff" bindtap="changeCarType">新</text>
+    </view>
+    <van-button disabled="{{!carlicenseArr.length}}" class="search" custom-style="font-family: PingFang-SC-Bold, PingFang-SC, sans-serif;margin-top: 80rpx;border-radius: 8rpx;width: 100%" bind:click="bindCar" type="primary" color="#66ccff">查询缴费信息</van-button>
+  </view>
+  <view class="history">
+    <view>
+      <text class="title">历史搜索</text>
+        <van-icon bindtap="delRecord" name="delete" />
+    </view>
+    <view class="record">
+      <view class="item">新BV3425</view>
+      <view class="item">新BV3425</view>
+      <view class="item">新BV3425</view>
+      <view class="item">新BV3425</view>
+      <view class="item">新BV3425</view>
+      <view class="item">新BV3425</view>
+      <view class="item">新BV3425</view>
+      <view class="item">新BV3425</view>
+      <view class="item">新BV3425</view>
+      <view class="item">新BV3425</view>
+    </view>
+  </view>
+  <keyboard show="{{showKeyBoard}}" showCnKeyBoard="{{showCnKeyBoard}}" bind:key-press="keyPress" bind:del-press="delPress" bind:clear-press="clearPress" />
+</view>
+<view class="notfound" hidden="{{isShow}}">
+  <view><text>未查询到车辆入场信息</text></view>
+  <image src="/images/not.png" alt />
+  <van-button bind:click="goback" custom-style="width:100%;border-radius: 8rpx;" type="primary" color="#66ccff">返回首页</van-button>
+</view>

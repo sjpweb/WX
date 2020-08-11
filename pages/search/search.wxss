@@ -1,0 +1,78 @@
+/* pages/search/search.wxss *//* pages/addcar/addcar.wxss *//* pages/addcar/addcar.wxss */
+/* page{
+  width: 654rpx;
+  padding: 0 48rpx;
+} */
+
+.wrap {
+  width: 100%;
+  padding: 0 88rpx;
+  padding-top: 80rpx;
+  font-size: 32rpx;
+  box-sizing: border-box;
+  background: white;
+  text-align: center;
+}
+.wrap .search_title {
+  font-family: PingFang-SC-Bold, PingFang-SC, sans-serif;
+  text-align: center;
+  height: 32rpx;
+  font-size: 32rpx;
+  color: #000000;
+  line-height:32rpx;
+}
+.wrap .new_energy_car {
+  height: 100rpx;
+  border-radius: 10rpx;
+  margin-top: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.wrap .new_energy_car text {
+  font-size: 44rpx;
+  display: block;
+  width: 64rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-bottom: 1px solid #0cadb1;
+}
+.history{
+  margin-top: 80rpx;
+  padding: 0 40rpx;
+  overflow: hidden;
+}
+.history .title{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.history van-icon{
+  float: right;
+  margin-top: 8rpx;
+}
+.history .record{
+  margin-top: 40rpx;
+}
+.history .record .item{
+  float: left;
+  font-size: 28rpx;
+  padding: 10rpx;
+  background: #ccc;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  border-radius: 5rpx;
+}
+.notfound{
+  font-size: 32rpx;
+  padding: 0 40rpx;
+  text-align: center;
+  color: #66ccff;
+  margin-top: 60rpx;
+}
+.notfound text{
+  line-height: 80rpx;
+}
+.notfound image{
+  width: 100%;
+}

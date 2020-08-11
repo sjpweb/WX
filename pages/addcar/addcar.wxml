@@ -12,11 +12,10 @@
       <text bindtap="showKeyBoard">{{carlicenseArr[4] ? carlicenseArr[4] : ''}}</text>
       <text bindtap="showKeyBoard">{{carlicenseArr[5] ? carlicenseArr[5] : ''}}</text>
       <text bindtap="showKeyBoard">{{carlicenseArr[6] ? carlicenseArr[6] : ''}}</text>
-      <text wx:if="{{newEnergyCar}}" bindtap="showKeyBoard" style="color:#16AF99">{{carlicenseArr[7] ? carlicenseArr[7] : ''}}</text>
-      <text wx:else style="color:#16AF99" bindtap="changeCarType">新</text>
+      <text wx:if="{{newEnergyCar}}" bindtap="showKeyBoard" style="color:#66ccff">{{carlicenseArr[7] ? carlicenseArr[7] : ''}}</text>
+      <text wx:else style="color:#66ccff" bindtap="changeCarType">新</text>
     </view>
-
-    <van-button disabled="{{!carlicenseArr.length}}" class="search" custom-style="font-family: PingFang-SC-Bold, PingFang-SC, sans-serif;margin-top: 80rpx;border-radius: 8rpx;" bind:click="bindCar" type="primary" size="large" color="#16AF99">立即绑定</van-button>
+    <van-button disabled="{{!carlicenseArr.length}}" class="search" custom-style="font-family: PingFang-SC-Bold, PingFang-SC, sans-serif;margin-top: 80rpx;border-radius: 8rpx;width: 100%" bind:click="bindCar" type="primary" color="#66ccff">确认添加</van-button>
   </view>
 
   <keyboard show="{{showKeyBoard}}" showCnKeyBoard="{{showCnKeyBoard}}" bind:key-press="keyPress" bind:del-press="delPress" bind:clear-press="clearPress" />

@@ -62,6 +62,11 @@ Page({
       url: '../addcar/addcar'
     })
   },
+  search: function () {
+    wx.navigateTo({
+      url: '../search/search'
+    })
+  },
   onSearch: function(e) {
     this.setData({
       value: e.detail

@@ -1,11 +1,12 @@
 <!--index.wxml-->
 <navigation-bar></navigation-bar>
 <view class="container" style="margin-top:{{navBarHeight}}px">
-  <van-search 
-   value="{{ value }}"
+  <van-search
+   disabled
+   bindtap="search"
    shape="round"
    background="rgba(0,0,0,0)"
-   placeholder="请输入搜索关键词"/>
+   placeholder="查询缴费信息"/>
    <view class="swiper-container">
     <swiper indicator-dots="{{indicatorDots}}"
       current='0'

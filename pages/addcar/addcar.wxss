@@ -6,7 +6,7 @@
 
 .wrap {
   width: 100%;
-  padding: 0 48rpx;
+  padding: 0 88rpx;
   padding-top: 80rpx;
   font-size: 32rpx;
   box-sizing: border-box;
@@ -38,9 +38,5 @@
   line-height: 100rpx;
   text-align: center;
   border-bottom: 1px solid #0cadb1;
-}
-.wrap .search {
-  font-family: PingFang-SC-Bold, PingFang-SC, sans-serif;
-  border-radius: 8rpx;
 }
 
