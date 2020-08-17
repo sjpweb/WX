@@ -1,0 +1,106 @@
+/* pages/expenditure/expenditure.wxss */
+.expenditureHead{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #66ccff;
+  font-size: 32rpx;
+  padding: 0 20rpx;
+  line-height: 80rpx;
+  background-color: #f0f3f6;
+  z-index: 10;
+}
+.expenditureHead .right{
+  float: right;
+}
+.expenditureList{
+  margin-top: 80rpx;
+  font-size: 20rpx;
+}
+.expenditureList .item{
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+.expenditureList .item van-checkbox{
+  position: absolute;
+  left: 34rpx;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+.expenditureList .item view{
+  line-height: 60rpx;
+}
+.carNum{
+  font-size: 40rpx;
+}
+.expenditureList .item .carNum .van-tag {
+  margin-left: 30rpx;
+  line-height: 30rpx;
+}
+.carNum text{
+  float: right;
+  font-size: 20rpx;
+  line-height: 80rpx;
+}
+.money{
+  position: absolute;
+  right:20rpx;
+  bottom: 30rpx;
+  font-size: 36rpx;
+  color: red;
+}
+.page_bottom .pay_nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100rpx;
+  width: 100%;
+  font-size: 28rpx;
+  background: white;
+  color: #000;
+  border-top: 1px solid #dbe0e6;
+  border-left: 1px solid #dbe0e6;
+}
+.page_bottom .pay_nav view{
+  width:380rpx;
+  height: 50rpx;
+  text-align: center;
+}
+.page_bottom .pay_nav text {
+  font-family: Roboto-Regular, Roboto, sans-serif;
+  font-weight: 400;
+  color: red;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.page_bottom .pay_nav .payBtn {
+  width: 374rpx !important;
+  height: 100rpx;
+  position: absolute;
+  right:0;
+  top: 0;
+  font-size: 32rpx;
+  border-radius: 8rpx;
+}
+.invoice_title{
+  line-height: 80rpx;
+  color: #66ccff;
+}
+.invoice_info{
+  padding: 40rpx 0;
+  font-size: 34rpx;
+}
+.invoice_info text{
+  color: red;
+}
+.invoice_btn{
+  display: flex;
+  justify-content: space-between;
+}
+.invoice_btn .van-button--normal{
+  padding: 0 70rpx !important;
+}

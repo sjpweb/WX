@@ -1,0 +1,43 @@
+<!--pages/einvoice/einvoice.wxml-->
+<view class="title">发票详情</view>
+<view class="container">
+  <view class="item">抬头类型
+    <radio-group name="radio" bindchange="changeType">
+      <label><radio color="#66ccff" value="0" checked/>企业单位</label>
+      <label><radio color="#66ccff" value="1"/>个人/非企业单位</label>
+    </radio-group>
+  </view>
+    <van-field
+      value="{{ invoiceInfo.name }}"
+      label="公司名称"
+      placeholder="请填写发票抬头"
+      bind:change="changeName"
+      error-message="{{isname? '': '请填写发票抬头'}}"
+      clearable
+    />
+    <van-field
+      wx:if="{{!isShow}}"
+      value="{{ invoiceInfo.num }}"
+      label="公司税号"
+      placeholder="请填写共公司税号"
+      bind:change="changeNum"
+      error-message="{{isnum? '': '请填写共公司税号'}}"
+      clearable
+    />
+    <view class="item">
+      总金额 总计<text>￥{{money}}</text>
+    </view>
+    <view class="text">接收方式</view>
+    <van-field
+      value="{{ invoiceInfo.Email }}"
+      label="电子邮件"
+      placeholder="请填写接收发票的邮箱地址"
+      bind:change="changeEmail"
+      error-message="{{isEmail? '': '邮箱格式错误'}}"
+      clearable
+    />
+</view>
+<view class="message">请确认邮箱地址，系统将在成功开具发票后将发票发送至您的邮箱，请注意查收。</view>
+<view class="btn">
+  <van-button bind:click="submit" disabled="{{!invoiceInfo.Email.length}}" custom-style="width:100%;margin-top:80rpx;border-radius: 8rpx;" type="primary" color="#66ccff">确认开票</van-button>
+</view>

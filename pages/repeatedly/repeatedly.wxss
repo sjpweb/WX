@@ -1,0 +1,55 @@
+/* pages/repeatedly/repeatedly.wxss */
+page{
+  background-color: #fff;
+}
+.container{
+  width: 100%;
+  padding: 0 50rpx;
+  padding-top: 80rpx;
+  font-size: 32rpx;
+  box-sizing: border-box;
+  text-align: center;
+}
+.title{
+  text-align: center;
+  margin-bottom:60rpx;
+}
+.container .van-cell{
+  border-radius: 10rpx;
+  padding:15rpx 30rpx !important;
+  border: 1px solid #66ccff;
+}
+.help{
+  margin-top: 40rpx;
+  color: #66ccff;
+  text-align: right;
+}
+.notfound{
+  font-size: 32rpx;
+  padding: 0 40rpx;
+  text-align: center;
+  color: #66ccff;
+  margin-top: 60rpx;
+}
+.notfound .info{
+  line-height: 80rpx;
+}
+.notfound image{
+  width: 100%;
+}
+.makeInvoice .info{
+  font-size: 34rpx;
+  padding: 0 40rpx;
+  text-align: center;
+  color: #66ccff;
+  margin-top: 60rpx;
+  line-height: 80rpx;
+}
+.makeInvoice .btn{
+  padding: 0 60rpx;
+}
+.makeInvoice .text{
+  font-size: 20rpx;
+  color: #aaaaaa;
+  text-indent: 40rpx;
+}

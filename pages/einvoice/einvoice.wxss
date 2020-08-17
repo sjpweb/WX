@@ -1,0 +1,41 @@
+/* pages/einvoice/einvoice.wxss */
+page{
+  background-color: rgb(228, 226, 226);
+}
+.title{
+  line-height: 80rpx;
+  text-indent: 40rpx;
+  font-size: 32rpx;
+}
+.container{
+  background: #fff;
+}
+.container .item{
+  margin-left: 40rpx;
+  line-height: 100rpx;
+  font-size: 34rpx;
+  border-bottom:1rpx solid #ebedf0;
+} 
+.container .item radio-group{
+  float: right;
+}
+.container .item radio-group label{
+  margin-right: 30rpx;
+  line-height: 100rpx;
+  font-size: 34rpx;
+}
+.container .item text{
+  color: red;
+}
+.container .text{
+  background-color: rgb(228, 226, 226);
+  line-height: 100rpx;
+  text-indent: 40rpx;
+}
+.message{
+  font-size: 20rpx;
+  text-align: center;
+}
+.btn{
+  padding: 0 40rpx;
+}

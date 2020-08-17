@@ -1,0 +1,45 @@
+<!--pages/pay/pay.wxml-->
+<wxs module="filter" src="../../utils/filter.wxs"></wxs>
+<view class="payInfo">
+  <view class="carInfo">
+    <text class="carNum">{{carInfo.carNum}}</text>
+    <text class="stopTimer">停车时长：{{carInfo.stopTimer}}</text>
+    <text class="paySataus">{{["待支付","已支付"][carInfo.paySataus]}}</text>
+    <text class="money">￥{{carInfo.money}}</text>
+    <view>
+      <view wx:if="{{isValid}}" class="countdown">
+        请在
+        <text class="payTimer">{{countdownTime[0]}}分{{countdownTime[1]}}秒</text> 内完成支付
+      </view>
+      <view wx:else class="outOfTime">订单已超时，请返回重试</view>
+    </view>
+  </view>
+  <view class="expenditureInfo">
+    <view class="item">入场时间<text>{{expenditureInfo.entTimer}}</text></view>
+    <view class="item">停车场<text>{{filter.filterText(expenditureInfo.parkling)}}</text></view>
+    <view class="item">总计<text>￥{{expenditureInfo.allMoeny}}</text></view>
+    <view class="item">优惠抵扣<text>￥-{{expenditureInfo.discounts}}</text></view>
+    <view class="item">场内已支付<text>￥-{{expenditureInfo.havePay}}</text></view>
+    <view class="rule" bindtap="lookRule"><van-icon name="info-o" /> 查看计费规则</view>
+  </view>
+</view>
+
+<view class="page_bottom">
+    <view wx:if="{{expenditureInfo.havePay>0}}" class="pay_nav" style="bottom:{{iphoneXbtm}}">
+      需支付：
+      <text class="actullyPay">
+          <text>￥</text>
+      <text class="yuan">{{expenditureInfo.havePay}}</text>
+      </text>
+      <van-button custom-class="{{isValid? 'payBtn' : 'payBtn isInvalid'}}" type="primary" size="large" disabled="{{!isValid}}" color="#66ccff" bind:click="unifiedOrder">立即支付</van-button>
+    </view>
+  </view>
+
+  <van-dialog use-slot custom-style="width: 540rpx;max-height: 70%;padding: 60rpx 40rpx;border-radius: 16rpx;overflow-y: scroll;text-align:center;" show="{{showFeeRule}}" show-confirm-button="{{false}}">
+    <view class="fee_rule_title">计费规则说明</view>
+    <view class="fee_rule">
+      <view class="feeRule">1.收费规则：每日首次入场,第一个小时免费。超过一个小时的部分按照15元/小时收费,收费规则为云平台临停计费规则设置中的计费描述。</view>
+      <view class="feeRule">2.场内支付完成后：支付完成后需要在规定时间限制内离场，离场时间为云平台中设置的支付完成后限制离场的时间。</view>
+    </view>
+    <view class="fee_rule_btn" bindtap="hideFeeRule">我知道了</view>
+  </van-dialog>

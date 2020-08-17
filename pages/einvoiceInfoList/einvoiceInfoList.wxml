@@ -1,0 +1,16 @@
+<!--pages/expenditure/expenditure.wxml-->
+<wxs module="filter" src="../../utils/filter.wxs"></wxs>
+<view class="container">
+  <view class="expenditureList">
+    <view class="item" wx:for="{{invoiceList}}" wx:key="index" style="padding-left:{{isBacth? 120:20}}rpx">
+      <view id='{{item.carNum}}' bindtap="getCarNum">
+        <view class="carNum">{{filter.filterText(item.carNum)}}<van-tag plain type="primary">{{['月租','临停'][item.type]}}</van-tag><text>已完成></text></view>
+        <view class="parking">{{filter.filterText(item.parkName)}}</view>
+        <view class="timer" wx:if="{{item.monthTimer}}">{{item.monthTimer}}</view>
+        <view class="timer" wx:if="{{item.entertimer}}">{{item.entertimer}}</view>
+        <view class="timer" wx:if="{{item.stopTimer}}">{{item.stopTimer}}</view>
+        <view class="money">￥{{item.money}}</view>
+      </view>
+    </view>
+  </view>
+</view>

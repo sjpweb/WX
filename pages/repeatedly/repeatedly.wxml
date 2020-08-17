@@ -1,0 +1,33 @@
+<!--pages/repeatedly/repeatedly.wxml-->
+<view class="container" wx:if="{{!result}}">
+  <view class="title">请输入需要开发票的订单号</view>
+  <van-field
+      value="{{ value }}"
+      placeholder="请输入订单号"
+      bind:change="onChange"
+    />
+  <van-button disabled="{{!value}}" class="search" custom-style="font-family: PingFang-SC-Bold, PingFang-SC, sans-serif;margin-top: 80rpx;border-radius: 8rpx;width: 100%" bind:click="seek" type="primary" color="#66ccff">查询订单信息</van-button>
+  <view class="help" bindtap="help">找不到订单号？</view>
+</view>
+<view class="makeInvoice" wx:else>
+    <view class="info">该订单已开票</view>
+    <view class="makeBox">
+      <view class="text">接收方式</view>
+      <van-field
+        value="{{ Email }}"
+        label="电子邮箱"
+        placeholder="请填写接收的邮箱地址"
+        error-message="{{isErrorMessage? '': '邮箱格式错误'}}"
+        bind:change="changeEmail"
+      />
+      <view class="text">请确认邮箱地址，系统将在成功开具发票后将发票发送至您的邮箱，请注意查收。</view>
+    </view>
+    <view class="btn">
+      <van-button disabled="{{!Email}}" class="search" custom-style="font-family: PingFang-SC-Bold, PingFang-SC, sans-serif;margin-top: 80rpx;border-radius: 8rpx;width: 100%" bind:click="send" type="primary" color="#66ccff">再次发送发票</van-button>
+    </view>
+</view>
+<view class="notfound" hidden="{{isShow}}">
+  <view class="info">未查询到订单信息</view>
+  <image src="/images/not.png" alt />
+  <van-button bind:click="goback" custom-style="width:100%;border-radius: 8rpx;" type="primary" color="#66ccff">返回上一页</van-button>
+</view>

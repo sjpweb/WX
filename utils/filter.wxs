@@ -1,0 +1,10 @@
+
+ var filter = {
+	filterText: function(value){
+    return value.substring(0, 2) + '***' + value.substring(5)
+	}
+}
+// 导出对外暴露的属性
+module.exports = {
+	filterText: filter.filterText
+}

@@ -1,0 +1,48 @@
+<!--pages/expenditure/expenditure.wxml-->
+<wxs module="filter" src="../../utils/filter.wxs"></wxs>
+<view class="expenditureHead">
+  <text bindtap="order">没找到订单？点击此处订单号开票</text>
+  <text class="right" bindtap="batch">{{isBacth? '取消' : '批量开票'}}</text>
+</view>
+<view class="container">
+  <view class="expenditureList">
+    <view class="item" wx:for="{{invoiceList}}" wx:key="index" style="padding-left:{{isBacth? 120:20}}rpx">
+      <view id='{{item.carNum}}' bindtap="getCarNum">
+        <view class="carNum">{{filter.filterText(item.carNum)}}<van-tag plain type="primary">{{['月租','临停'][item.type]}}</van-tag><text wx:if="{{!isBacth}}">已完成</text></view>
+        <view class="parking">{{filter.filterText(item.parkName)}}</view>
+        <view class="timer" wx:if="{{item.monthTimer}}">{{item.monthTimer}}</view>
+        <view class="timer" wx:if="{{item.entertimer}}">{{item.entertimer}}</view>
+        <view class="timer" wx:if="{{item.stopTimer}}">{{item.stopTimer}}</view>
+        <view class="money">￥{{item.money}}</view>
+        <van-checkbox
+          id='{{index}}'
+          wx:if="{{isBacth}}"
+          value="{{ item.checked }}"
+          checked-color="#66ccff"
+          bind:change="onChange"
+        >
+        </van-checkbox>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="page_bottom">
+    <view wx:if="{{isBacth}}" class="pay_nav" style="bottom:{{iphoneXbtm}}">
+      <view class="num">
+        已选择<text>{{invoiceNum.length}}</text>笔消费
+      </view>
+      <view class="moeny">共计<text>￥{{money}}</text></view>
+      <van-button custom-class="payBtn" type="primary" size="large" disabled="{{!invoiceNum.length}}" color="#66ccff" bind:click="goIncoice">下一步</van-button>
+    </view>
+  </view>
+
+  <van-dialog use-slot custom-style="width: 540rpx;max-height: 70%;padding: 60rpx 40rpx;border-radius: 16rpx;overflow-y: scroll;text-align:center;" show="{{showInvoiceInfo}}" show-confirm-button="{{false}}">
+    <view class="invoice_title">开票确认</view>
+    <view class="invoice_info">
+      <view>您已选择 <text>{{invoiceNum.length}}</text> 笔消费记录，总计 <text>￥{{money}}</text> ，是否确认开票？</view>
+    </view>
+    <view class="invoice_btn">
+      <van-button color="#000" plain bind:click="counter">取消</van-button>
+      <van-button color="#66ccff" bind:click="confirm">确认</van-button>
+    </view>
+  </van-dialog>

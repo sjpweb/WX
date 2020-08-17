@@ -1,4 +1,5 @@
-/**app.wxss**/
-.container {
-  box-sizing: border-box;
-} 
+page{
+  background-color: #f0f3f6;
+  font-family: PingFang-SC-Bold, PingFang-SC, sans-serif;
+}
+button{width: 100%!important;}

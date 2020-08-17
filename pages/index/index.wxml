@@ -1,4 +1,5 @@
 <!--index.wxml-->
+<wxs module="filter" src="../../utils/filter.wxs"></wxs>
 <navigation-bar></navigation-bar>
 <view class="container" style="margin-top:{{navBarHeight}}px">
   <van-search
@@ -16,7 +17,7 @@
         <swiper-item wx:if="{{item.carNum}}" id='{{index}}'>
           <view class="swiper-item">
             <view class="item">
-              <text class="carNum">{{item.carNum}}</text>
+              <text class="carNum">{{filter.filterText(item.carNum)}}</text>
               <van-tag
                 round
                 wx:if="{{item.type != undefined}}"
@@ -28,16 +29,16 @@
             <view class="item" wx:if="{{item.entranceTimer}}"><van-icon name="passed" color="#66ccff"/><text>入场时间：{{item.entranceTimer}}</text></view>
             <view class="item" wx:if="{{item.monthlyTimer}}">
               <van-icon name="play-circle-o" color="#66ccff"/><text>月租到期时间：{{item.monthlyTimer}}</text>
-              <view wx:if="{{item.carNum}}" class="set">{{['月租续费','临停缴费','管理车辆'][item.type]}}<van-icon name="arrow" /></view>
+              <view wx:if="{{item.carNum}}" class="set" bindtap="pay">{{['月租续费','临停缴费','管理车辆'][item.type]}}<van-icon name="arrow" /></view>
             </view>
             <view class="item" wx:if="{{item.stopTimer}}">
               <van-icon name="close" color="#66ccff"/><text>已停时长：{{item.stopTimer}}</text>
-              <view wx:if="{{item.carNum}}" class="set">{{['月租续费','临停缴费','管理车辆'][item.type]}}<van-icon name="arrow" /></view>
+              <view wx:if="{{item.carNum}}" class="set" bindtap="pay">{{['月租续费','临停缴费','管理车辆'][item.type]}}<van-icon name="arrow" /></view>
           </view>
           </view>
         </swiper-item>
         <swiper-item wx:else>
-          <view class="swiper-item addCar" bindtap="click">
+          <view class="swiper-item addCar" bindtap="addCar">
             <text>+ 添加车牌</text>  
           </view>
         </swiper-item>
@@ -54,7 +55,7 @@
       <image src="/images/moth.png" alt />
       <text>月租办理</text>
     </van-grid-item>
-    <van-grid-item use-slot>
+    <van-grid-item use-slot bindtap="goExpenditure">
       <image src="/images/inov.png" alt />
       <text>开具发票</text>
     </van-grid-item>

@@ -1,0 +1,39 @@
+/* pages/einvoiceInfoList/einvoiceInfoList.wxss */
+/* pages/expenditure/expenditure.wxss */
+.expenditureList{
+  font-size: 20rpx;
+}
+.expenditureList .item{
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+.expenditureList .item van-checkbox{
+  position: absolute;
+  left: 34rpx;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+.expenditureList .item view{
+  line-height: 60rpx;
+}
+.carNum{
+  font-size: 40rpx;
+}
+.expenditureList .item .carNum .van-tag {
+  margin-left: 30rpx;
+  line-height: 30rpx;
+}
+.carNum text{
+  float: right;
+  font-size: 20rpx;
+  line-height: 80rpx;
+}
+.money{
+  position: absolute;
+  right:20rpx;
+  bottom: 30rpx;
+  font-size: 36rpx;
+  color: red;
+}

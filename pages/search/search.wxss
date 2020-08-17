@@ -3,7 +3,9 @@
   width: 654rpx;
   padding: 0 48rpx;
 } */
-
+page{
+  background-color: #fff;
+}
 .wrap {
   width: 100%;
   padding: 0 88rpx;

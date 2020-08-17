@@ -1,7 +1,9 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+import {
+  filterText
+} from '../../utils/util.js';
 Page({
   data: {
     navBarHeight: app.globalData.navBarHeight,
@@ -57,14 +59,24 @@ Page({
     duration: 500,
     value: '',
   },
-  click: function() {
+  addCar() {
     wx.navigateTo({
       url: '../addcar/addcar'
     })
   },
-  search: function () {
+  search() {
     wx.navigateTo({
       url: '../search/search'
+    })
+  },
+  pay() {
+    wx.navigateTo({
+      url: '../pay/pay?carNum='+1
+    })
+  },
+  goExpenditure() {
+    wx.navigateTo({
+      url: '../expenditure/expenditure'
     })
   },
   onSearch: function(e) {
@@ -105,6 +117,7 @@ Page({
       wx.getUserInfo({
         success: res => {
           app.globalData.userInfo = res.userInfo
+          console.log(res)
           this.setData({
             userInfo: res.userInfo,
             hasUserInfo: true

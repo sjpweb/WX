@@ -1,0 +1,14 @@
+<!--pages/einvoice/einvoice.wxml-->
+<view class="container">
+  <view class="title">电子发票 <view class="right">已开票<van-icon name="arrow"/></view></view>
+  <view class="item">公司名称 <text>北京某有限公司</text></view>
+  <view class="item">公司税号 <text>ASDFGHJKLQWERTYU</text></view>
+  <view class="item">发票内容 <text style="color:red">￥ 900</text></view>
+  <view class="item">申请时间 <text>2020.07.21 周二 09：32</text></view>
+  <view class="title" style="font-size:30rpx"> <text style="color:red">6</text> 张发票，总计 <text style="color:red">6</text> 张消费记录<view class="right" bindtap="look">查看<van-icon name="arrow"/></view></view>
+  <view class="title">接收信息</view>
+  <view class="item">电子邮箱 <text>parktest@jd.com</text></view>
+</view>
+<view class="btn">
+  <van-button bind:click="goback" custom-style="width:100%;margin-top:80rpx;border-radius: 8rpx;" type="primary" color="#66ccff">返回首页</van-button>
+</view>

@@ -1,4 +1,7 @@
 /**index.wxss**/
+page{
+  background-color: #fff;
+}
 .container {
   background: linear-gradient(to bottom, #66ccff 0%,#ffffff 100%);
 }
@@ -27,7 +30,7 @@
 .container swiper .swiper-item .item .set .van-icon{
   font-size: 24rpx;
   position: relative;
-  top: 9rpx;
+  top: 6rpx;
 }
 .container swiper .swiper-item .item .carNum{
   font-size: 40rpx;
@@ -71,7 +74,7 @@
   height: 14rpx;
   background-color: #ccc;
   border-radius: 8rpx;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .swiper-container .dots .dot.active {
   width: 30rpx;

@@ -1,0 +1,35 @@
+/* pages/einvoiceInfo/einvoiceInfo.wxss *//* pages/einvoice/einvoice.wxss */
+page{
+  background-color: rgb(228, 226, 226);
+}
+.container .title{
+  margin-top: 20rpx;
+  padding:0 40rpx;
+  line-height: 100rpx;
+  font-size: 40rpx;
+  border-bottom:1rpx solid #ebedf0;
+  background: #fff;
+}
+.container .title .right{
+  float: right;
+  color: #333;
+}
+.container .title .right van-icon{
+  position: relative;
+  top: 6rpx;
+}
+.container .item{
+  background: #fff;
+  padding:0 40rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+  color: #ccc;
+} 
+.container .item text{
+  margin-left: 50rpx;
+  font-size: 34rpx;
+  color: #333;
+}
+.btn{
+  padding: 0 40rpx;
+}

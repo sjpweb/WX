@@ -1,0 +1,125 @@
+/* pages/pay/pay.wxss */
+page{
+  background-color: #fff;
+}
+.payInfo{
+  padding: 0 60rpx;
+}
+.carInfo{
+  margin-top: 100rpx;
+  border-bottom: 1rpx dashed #ccc;
+}
+.carInfo text{
+  display: block;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.carInfo .carNum{
+  color: #66ccff;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.carInfo .stopTimer{
+  font-size: 20rpx;
+}
+.carInfo .paySataus{
+  font-size: 20rpx;
+}
+.carInfo .money{
+  color: red;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.carInfo .countdown{
+  font-size: 20rpx;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.carInfo .payTimer{
+  display: inline;
+  color: #66ccff;
+}
+.outOfTime{
+  color: red;
+  font-size: 20rpx;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.page_bottom .pay_nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100rpx;
+  width: 100%;
+  font-size: 28rpx;
+  text-align: left;
+  background: white;
+  line-height: 100rpx;
+  color: #000;
+  padding-left: 32rpx;
+  border-top: 1px solid #dbe0e6;
+  border-left: 1px solid #dbe0e6;
+}
+
+.page_bottom .pay_nav .actullyPay {
+  font-family: Roboto-Regular, Roboto, sans-serif;
+  font-weight: 400;
+  color: red;
+  line-height: 100rpx;
+  font-size: 24rpx;
+}
+
+.page_bottom .pay_nav .actullyPay .yuan {
+  font-size: 36rpx;
+}
+
+.page_bottom .pay_nav .payBtn {
+  width: 374rpx !important;
+  height: 100rpx;
+  float: right;
+  font-size: 32rpx;
+  border-radius: 8rpx;
+}
+.expenditureInfo .item{
+  font-size: 20rpx;
+  margin-top: 15rpx;
+}
+.expenditureInfo .item text{
+  float: right;
+}
+.expenditureInfo .rule{
+  margin-top: 30rpx;
+  font-size: 20rpx;
+  float: right;
+  color: #66ccff;
+}
+.fee_rule_title {
+  font-family: PingFangSC-Medium, PingFang SC, sans-serif;
+  height: 28rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #66ccff;
+  line-height: 28rpx;
+  margin: 0 auto;
+}
+
+.fee_rule {
+  text-align: left;
+  padding: 40rpx 0;
+  line-height: 46rpx;
+  letter-spacing: 1rpx;
+  font-size: 28rpx;
+}
+
+.fee_rule text {
+  color: #ff8a0f;
+}
+
+.fee_rule_btn {
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 26rpx;
+  width: 100%;
+  background: #66ccff;
+  color: #fff;
+}
