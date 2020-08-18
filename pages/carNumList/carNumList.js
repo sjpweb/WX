@@ -21,7 +21,7 @@ Page({
   },
   addCar() {
     wx.redirectTo({
-      url: '../addCar/addCar'
+      url: '../addcar/addcar'
     })
   },
   /**

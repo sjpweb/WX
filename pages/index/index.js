@@ -60,22 +60,22 @@ Page({
     value: '',
   },
   addCar() {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../addcar/addcar'
     })
   },
   search() {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../search/search'
     })
   },
   pay() {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../pay/pay?carNum='+1
     })
   },
   goExpenditure() {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../expenditure/expenditure'
     })
   },

@@ -6,7 +6,7 @@
       </view>
       <view class="info">
          <view class="phone">159*****23</view>
-         <view class="out" bindtap="userOut"><van-tag round color="#FFA500">退出登录></van-tag></view>
+         <view class="out" bindtap="userOut"><van-tag round color="#FFA500">退出登录</van-tag></view>
       </view>
   </view>
   <view class="set">
@@ -18,7 +18,7 @@
         <van-icon name="arrow" />
       </view>
     </view>
-    <view class="item" bindtap="goExpendiRecord">
+    <view class="item" bindtap="goExpenditure">
       <van-icon name="gold-coin-o" />
         消费记录
         <view class="right">

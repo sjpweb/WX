@@ -21,7 +21,7 @@ Component({
     },
     methods: {
       individual(){
-        wx.redirectTo({
+        wx.navigateTo({
           url: '../individual/individual'
         })
       }

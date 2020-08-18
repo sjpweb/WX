@@ -32,9 +32,9 @@ Page({
       url: '../carNumList/carNumList'
     })
   },
-  goExpendiRecord() {
+  goExpenditure() {
     wx.navigateTo({
-      url: '../expendiRecord/expendiRecord'
+      url: '../expenditure/expenditure'
     })
   },
   einvoiceManage() {
