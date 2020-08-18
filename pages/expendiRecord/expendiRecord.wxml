@@ -16,7 +16,7 @@
   </view>
     <van-button wx:if="{{isBtn}}" bind:click="goInvoice" custom-style="width:100%;margin-top:80rpx;border-radius: 8rpx;" type="primary" color="#66ccff">开具发票</van-button>
 </view>
-  <van-dialog use-slot custom-style="width: 540rpx;max-height: 70%;padding: 60rpx 40rpx;border-radius: 16rpx;overflow-y: scroll;text-align:center;" show="{{showFeeRule}}" show-confirm-button="{{false}}">
+  <van-dialog use-slot custom-style="width: 540rpx;max-height: 70%;padding: 60rpx 40rpx;border-radius: 16rpx;text-align:center;" show="{{showFeeRule}}" show-confirm-button="{{false}}">
     <view class="fee_rule_title">计费规则说明</view>
     <view class="fee_rule">
       <view class="feeRule">1.收费规则：每日首次入场,第一个小时免费。超过一个小时的部分按照15元/小时收费,收费规则为云平台临停计费规则设置中的计费描述。</view>

@@ -37,7 +37,7 @@
     </view>
   </view>
 
-  <van-dialog use-slot custom-style="width: 540rpx;max-height: 70%;padding: 60rpx 40rpx;border-radius: 16rpx;overflow-y: scroll;text-align:center;" show="{{showInvoiceInfo}}" show-confirm-button="{{false}}">
+  <van-dialog use-slot custom-style="width: 540rpx;max-height: 70%;padding: 60rpx 40rpx;border-radius: 16rpx;text-align:center;" show="{{showInvoiceInfo}}" show-confirm-button="{{false}}">
     <view class="invoice_title">开票确认</view>
     <view class="invoice_info">
       <view>您已选择 <text>{{invoiceNum.length}}</text> 笔消费记录，总计 <text>￥{{money}}</text> ，是否确认开票？</view>
