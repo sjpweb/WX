@@ -1,0 +1,13 @@
+<!--pages/einvoiceManage/einvoiceManage.wxml-->
+<wxs module="filter" src="../../utils/filter.wxs"></wxs>
+<view class="container">
+  <view class="expenditureList">
+    <view class="item" wx:for="{{invoiceList}}" wx:key="index" bindtap="goInvoiceInfo">
+      <view id='{{item.carNum}}'>
+        <view class="timer"><van-icon name="clock-o" />{{filter.filterText(item.carNum)}}<text>已完成></text></view>
+        <view>停车费<van-tag  bindtap="delCar" plain color="#66ccff">电子发票</van-tag></view>
+        <view class="money">￥{{item.money}}</view>
+      </view>
+    </view>
+  </view>
+</view>

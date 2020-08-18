@@ -64,6 +64,9 @@ Page({
       }
     })
   },
+  unifiedOrder() {
+
+  },
   lookRule() {
     this.setData({
       showFeeRule: true

@@ -19,6 +19,7 @@
         placeholder="请填写接收的邮箱地址"
         error-message="{{isErrorMessage? '': '邮箱格式错误'}}"
         bind:change="changeEmail"
+        clearable
       />
       <view class="text">请确认邮箱地址，系统将在成功开具发票后将发票发送至您的邮箱，请注意查收。</view>
     </view>

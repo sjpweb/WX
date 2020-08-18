@@ -152,7 +152,7 @@ Page({
       carLinst: arr
     }
     const str = JSON.stringify(obj)
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../einvoice/einvoice?info='+str
     })
   },

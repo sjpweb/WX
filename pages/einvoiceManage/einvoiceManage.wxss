@@ -1,3 +1,4 @@
+/* pages/einvoiceManage/einvoiceManage.wxss */
 /* pages/einvoiceInfoList/einvoiceInfoList.wxss */
 /* pages/expenditure/expenditure.wxss */
 .expenditureList{
@@ -6,28 +7,31 @@
 .expenditureList .item{
   background-color: #fff;
   padding: 20rpx 30rpx;
-  margin-bottom: 20rpx;
+  margin-top: 20rpx;
   position: relative;
+  font-size: 28rpx;
 }
-.expenditureList .item view{
+.timer{
+  font-size: 24rpx;
   line-height: 60rpx;
 }
-.carNum{
-  font-size: 40rpx;
+.expenditureList .item van-icon{
+  position: relative;
+  top: 6rpx;
+  color: #66ccff;
+  margin-right: 20rpx;
 }
-.expenditureList .item .carNum .van-tag {
+van-tag{
   margin-left: 30rpx;
-  line-height: 30rpx;
 }
-.carNum text{
+.timer text{
   float: right;
   font-size: 20rpx;
-  line-height: 80rpx;
 }
 .money{
   position: absolute;
-  right:20rpx;
-  bottom: 30rpx;
+  right:30rpx;
+  bottom: 20rpx;
   font-size: 36rpx;
   color: red;
 }

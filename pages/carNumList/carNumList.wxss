@@ -1,0 +1,30 @@
+/* pages/carNumList/carNumList.wxss */
+.container{
+  padding: 20rpx 40rpx;
+}
+.car_list .item{
+  position: relative;
+  border-radius: 8rpx;
+  background-color: #fff;
+  height: 200rpx;
+  text-indent: 50rpx;
+  padding-top: 50rpx;
+  font-size: 36rpx;
+  margin-bottom: 20rpx;
+}
+.car_list .item .van-tag{
+  text-indent: 0rpx;
+  position: absolute;
+  right: 30rpx;
+  bottom:30rpx;
+}
+.addCar{
+  position: relative;
+  height: 200rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  text-align: center;
+  line-height: 200rpx;
+  font-size: 30rpx;
+  color:#66ccff;
+}

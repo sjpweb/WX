@@ -1,0 +1,12 @@
+<!--pages/carNumList/carNumList.wxml-->
+<view class="container">
+  <view class="car_list" wx:for="{{carNumList}}" wx:key="index" wx:if="{{carNumList.length}}">
+    <view class="item">
+      {{item}}
+      <van-tag  bindtap="delCar" round plain color="#66ccff">删除</van-tag>
+    </view>
+  </view>
+  <view class="addCar" bindtap="addCar">
+    <text>+ 新增车牌</text>
+  </view>
+</view>

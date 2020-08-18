@@ -1,7 +1,4 @@
 /* pages/einvoiceInfo/einvoiceInfo.wxss *//* pages/einvoice/einvoice.wxss */
-page{
-  background-color: rgb(228, 226, 226);
-}
 .container .title{
   margin-top: 20rpx;
   padding:0 40rpx;

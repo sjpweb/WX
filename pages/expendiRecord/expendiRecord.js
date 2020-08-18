@@ -12,6 +12,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isBtn: true,
     carInfo:{
       carNum: '京A88888',
       stopTimer: '3小时37分钟47秒',
@@ -32,7 +33,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options);
+    if(options.isBtn) this.setData({isBtn: false})
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -51,7 +52,7 @@ Page({
     })
   },
   goInvoice() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../einvoice/einvoice'
     })
   },

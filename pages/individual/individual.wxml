@@ -1,0 +1,59 @@
+<!--pages/individual/individual.wxml-->
+<view class="container">
+  <view class="user">
+      <view class="portrait">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="info">
+         <view class="phone">159*****23</view>
+         <view class="out" bindtap="userOut"><van-tag round color="#FFA500">退出登录></van-tag></view>
+      </view>
+  </view>
+  <view class="set">
+    <view class="item" bindtap="carNumManage">
+      <van-icon name="logistics" />
+      车辆管理
+      <view class="right">
+       3辆
+        <van-icon name="arrow" />
+      </view>
+    </view>
+    <view class="item" bindtap="goExpendiRecord">
+      <van-icon name="gold-coin-o" />
+        消费记录
+        <view class="right">
+          <van-icon name="arrow" />
+        </view>
+    </view>
+    <view class="item">
+      <van-icon name="calender-o" />
+        月租管理
+        <view class="right">
+          <van-icon name="arrow" />
+        </view>
+    </view>
+    <view class="item" bindtap="einvoiceManage">
+      <van-icon name="coupon-o" />
+        发票管理
+        <view class="right">
+          <van-icon name="arrow" />
+        </view>
+    </view>
+    <view class="item">
+      <van-icon name="friends-o" />
+        关于我们
+        <view class="right">
+          <van-icon name="arrow" />
+        </view>
+    </view>
+  </view>
+</view>
+<van-popup
+  show="{{ show }}"
+  position="bottom"
+  bind:close="onClose"
+>
+  <view class="title">确定要退出账号吗？</view>
+  <view class="btn" bindtap="affirmOut"><navigator open-type="exit" target="miniProgram">退出</navigator></view>
+  <view class="btn" bindtap="cancelOut">取消</view>
+</van-popup>

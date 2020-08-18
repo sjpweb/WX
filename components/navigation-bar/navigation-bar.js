@@ -20,6 +20,10 @@ Component({
 
     },
     methods: {
-        
+      individual(){
+        wx.redirectTo({
+          url: '../individual/individual'
+        })
+      }
     }
 })

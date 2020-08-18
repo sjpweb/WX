@@ -6,6 +6,7 @@ Page({
   data: {
     showKeyBoard: false,
     showCnKeyBoard: true,
+    recordList: [],
     init: true,
     isShow: true,
     newEnergyCar: false,
@@ -41,10 +42,22 @@ Page({
       url: '../index/index'
     })
   },
-  delRecord() {
-    
+  clear() {
+    this.setData({
+      recordList: []
+    });
   },
-
+  findHistoryCarOrder(e) {
+    const car = e.currentTarget.dataset.car;
+    console.log(car);
+    // this.setData({
+    //   carlicenseArr: car.split(''),
+    //   carlength: car.length,
+    //   init: false,
+    //   showCnKeyBoard: false,
+    //   newEnergyCar: car.length == 8 ? true : false
+    // })
+  },
   showKeyBoard() {
     this.setData({
       showKeyBoard: true,
@@ -67,7 +80,6 @@ Page({
 
   bindCar() {
     const carlicense = this.data.carlicenseArr.join('');
-    console.log(carlicense);
     if (!carlicense || carlicense.length < 7) {
       wx.showToast({
         title: '请先填写正确的车牌号',
@@ -76,9 +88,13 @@ Page({
       })
       return;
     }
+    this.data.recordList.push(carlicense);
     this.setData({
-      isShow: false,
-    })
+      recordList: this.data.recordList
+    });
+    // this.setData({
+    //   isShow: false,
+    // })
   },
 
   showCnKeyBoardClick() {

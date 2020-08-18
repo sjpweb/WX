@@ -1,0 +1,74 @@
+/* pages/individual/individual.wxss */
+page{
+  background:#fff;
+}
+.container {
+  background: linear-gradient(to bottom, #66ccff 0%,#ffffff 100%);
+  padding: 20rpx 40rpx;
+}
+.user{
+  background:#fff;
+  position: relative;
+  width: 100%;
+  height: 180rpx;
+  border-radius: 8rpx;
+  padding-top: 30rpx;
+}
+.user .portrait{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  left: 50rpx;
+  top:50%;
+  transform: translate(0,-50%);
+  border-radius: 50%;
+  border: 1rpx solid #ccc;
+  overflow: hidden;
+}
+.user .info{
+  margin-left: 180rpx;
+}
+.user .info .out{
+  margin-top: 6rpx;
+}
+.set{
+  margin-top: 30rpx;
+  background:#fff;
+  padding: 0 40rpx;
+  border-radius: 8rpx;
+}
+.set .item{
+  line-height: 100rpx;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.set .item van-icon{
+  position: relative;
+  top: 5rpx;
+  color: #66ccff;
+  margin-right: 20rpx;
+  line-height: 100rpx;
+}
+.set .item .right{
+  float: right;
+  line-height: 100rpx;
+  color: #66ccff;
+  font-size: 24rpx;
+}
+.set .item .right van-icon{
+  color: #999;
+  margin-right: 0;
+}
+van-popup{
+  text-align: center;
+  font-size: 38rpx;
+  color:#333;
+}
+.title{
+  color:#999;
+  line-height: 120rpx;
+}
+.btn{
+  line-height: 120rpx;
+  border-top:1rpx solid #ccc;
+}

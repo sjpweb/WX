@@ -35,6 +35,6 @@ page{
   height: 100rpx;
   line-height: 100rpx;
   text-align: center;
-  border-bottom: 1px solid #0cadb1;
+  border-bottom: 1px solid #66ccff;
 }
 

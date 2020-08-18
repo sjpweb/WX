@@ -17,22 +17,13 @@
     </view>
     <van-button disabled="{{!carlicenseArr.length}}" class="search" custom-style="font-family: PingFang-SC-Bold, PingFang-SC, sans-serif;margin-top: 80rpx;border-radius: 8rpx;width: 100%" bind:click="bindCar" type="primary" color="#66ccff">查询缴费信息</van-button>
   </view>
-  <view class="history">
+  <view class="history" wx:if="{{recordList.length}}">
     <view>
       <text class="title">历史搜索</text>
-        <van-icon bindtap="delRecord" name="delete" />
+        <van-icon bindtap="clear" name="delete" />
     </view>
-    <view class="record">
-      <view class="item">新BV3425</view>
-      <view class="item">新BV3425</view>
-      <view class="item">新BV3425</view>
-      <view class="item">新BV3425</view>
-      <view class="item">新BV3425</view>
-      <view class="item">新BV3425</view>
-      <view class="item">新BV3425</view>
-      <view class="item">新BV3425</view>
-      <view class="item">新BV3425</view>
-      <view class="item">新BV3425</view>
+    <view class="record" wx:for="{{recordList}}" wx:key="index">
+      <view class="item" data-car="{{item}}" bindtap="findHistoryCarOrder">{{item}}</view>
     </view>
   </view>
   <keyboard show="{{showKeyBoard}}" showCnKeyBoard="{{showCnKeyBoard}}" bind:key-press="keyPress" bind:del-press="delPress" bind:clear-press="clearPress" />

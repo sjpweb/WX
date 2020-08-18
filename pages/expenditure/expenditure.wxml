@@ -1,7 +1,8 @@
 <!--pages/expenditure/expenditure.wxml-->
 <wxs module="filter" src="../../utils/filter.wxs"></wxs>
 <view class="expenditureHead">
-  <text bindtap="order">没找到订单？点击此处订单号开票</text>
+  <text wx:if="{{!isBacth}}" bindtap="order">没找到订单？点击此处订单号开票</text>
+  <text wx:else style="color:#999">可开票订单</text>
   <text class="right" bindtap="batch">{{isBacth? '取消' : '批量开票'}}</text>
 </view>
 <view class="container">

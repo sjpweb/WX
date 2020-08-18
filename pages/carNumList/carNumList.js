@@ -1,11 +1,13 @@
-// pages/einvoiceInfo/einvoiceInfo.js
+// pages/carNumList/carNumList.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    carNumList: [
+      '京A88888'
+    ]
   },
 
   /**
@@ -14,14 +16,12 @@ Page({
   onLoad: function (options) {
 
   },
-  goback() {
-    wx.redirectTo({
-      url: '../index/index'
-    })
+  delCar() {
+
   },
-  look() {
-    wx.navigateTo({
-      url: '../einvoiceInfoList/einvoiceInfoList'
+  addCar() {
+    wx.redirectTo({
+      url: '../addCar/addCar'
     })
   },
   /**

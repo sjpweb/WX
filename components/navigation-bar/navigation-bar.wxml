@@ -1,5 +1,7 @@
 <!-- 自定义顶部栏 -->
 <view class="nav-bar" style="height:{{navBarHeight}}px;">
-    <open-data type="userAvatarUrl" class="search" style="width:{{menuHeight}}px; height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; left:{{menuRight}}px; bottom:{{menuBotton}}px;"></open-data>
+    <view bindtap="individual">
+      <open-data type="userAvatarUrl" class="portrait" style="width:{{menuHeight}}px; height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; left:{{menuRight}}px; bottom:{{menuBotton}}px;"></open-data>
+    </view>
     <text class="title" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; bottom:{{menuBotton}}px;">智能停车小程序</text>
 </view>

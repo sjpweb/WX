@@ -5,7 +5,7 @@
   <view class="item">公司税号 <text>ASDFGHJKLQWERTYU</text></view>
   <view class="item">发票内容 <text style="color:red">￥ 900</text></view>
   <view class="item">申请时间 <text>2020.07.21 周二 09：32</text></view>
-  <view class="title" style="font-size:30rpx"> <text style="color:red">6</text> 张发票，总计 <text style="color:red">6</text> 张消费记录<view class="right" bindtap="look">查看<van-icon name="arrow"/></view></view>
+  <view class="title" bindtap="look" style="font-size:30rpx"> <text style="color:red">6</text> 张发票，总计 <text style="color:red">6</text> 张消费记录<view class="right">查看<van-icon name="arrow"/></view></view>
   <view class="title">接收信息</view>
   <view class="item">电子邮箱 <text>parktest@jd.com</text></view>
 </view>

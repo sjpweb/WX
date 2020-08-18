@@ -14,7 +14,7 @@
     <view class="item">场内已支付<text>￥-{{expenditureInfo.havePay}}</text></view>
     <view class="rule" bindtap="lookRule"><van-icon name="info-o" /> 查看计费规则</view>
   </view>
-    <van-button bind:click="goInvoice" custom-style="width:100%;margin-top:80rpx;border-radius: 8rpx;" type="primary" color="#66ccff">开具发票</van-button>
+    <van-button wx:if="{{isBtn}}" bind:click="goInvoice" custom-style="width:100%;margin-top:80rpx;border-radius: 8rpx;" type="primary" color="#66ccff">开具发票</van-button>
 </view>
   <van-dialog use-slot custom-style="width: 540rpx;max-height: 70%;padding: 60rpx 40rpx;border-radius: 16rpx;overflow-y: scroll;text-align:center;" show="{{showFeeRule}}" show-confirm-button="{{false}}">
     <view class="fee_rule_title">计费规则说明</view>

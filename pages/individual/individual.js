@@ -1,38 +1,11 @@
-// pages/einvoiceInfoList/einvoiceInfoList.js
+// pages/individual/individual.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    invoiceList:[
-      {
-        carNum: '京A99999',
-        parkName: '北京大兴停车场',
-        monthTimer: '2020年9月15日 - 2020年11月15日',
-        type: 0,
-        money: 30,
-        checked: false
-      },
-      {
-        carNum: '京A88888',
-        parkName: '北京大兴停车场',
-        entertimer: '2020年9月25日 13:32:21',
-        stopTimer: '0天2小时45分钟',
-        type: 1,
-        money: 600,
-        checked: false
-      },
-      {
-        carNum: '京A88888',
-        parkName: '北京大兴停车场',
-        entertimer: '2020年9月25日 13:32:21',
-        stopTimer: '0天2小时45分钟',
-        type: 1,
-        money: 600,
-        checked: false
-      }
-    ]
+    show: false
   },
 
   /**
@@ -41,9 +14,32 @@ Page({
   onLoad: function (options) {
 
   },
-  goInfo() {
+  userOut() {
+    this.setData({
+      show: true
+    })
+  },
+  affirmOut() {
+
+  },
+  cancelOut() {
+    this.setData({
+      show: false
+    })
+  },
+  carNumManage() {
     wx.navigateTo({
-      url: '../expendiRecord/expendiRecord?isBtn='+1
+      url: '../carNumList/carNumList'
+    })
+  },
+  goExpendiRecord() {
+    wx.navigateTo({
+      url: '../expendiRecord/expendiRecord'
+    })
+  },
+  einvoiceManage() {
+    wx.navigateTo({
+      url: '../einvoiceManage/einvoiceManage'
     })
   },
   /**

@@ -43,7 +43,12 @@ Page({
   },
   goInfo() {
     wx.navigateTo({
-      url: '../expendiRecord/expendiRecord?isBtn='+1
+      url: '../expendiRecord/expendiRecord'
+    })
+  },
+  goInvoiceInfo() {
+    wx.navigateTo({
+      url: '../einvoiceInfo/einvoiceInfo'
     })
   },
   /**

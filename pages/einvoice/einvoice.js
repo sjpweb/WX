@@ -24,8 +24,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const info = JSON.parse(options.info);
-    this.setData({ money: info.money})
+    if(options.info){
+      const info = JSON.parse(options.info);
+      this.setData({ money: info.money})
+    }
   },
   submit() {
     const {invoiceInfo, isShow} = this.data;
@@ -50,7 +52,7 @@ Page({
       icon: 'success',
       duration: 2000
     })
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../einvoiceInfo/einvoiceInfo'
     })
   },

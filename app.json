@@ -1,6 +1,5 @@
 {
   "pages":[
-    "pages/einvoiceInfo/einvoiceInfo",
     "pages/index/index",
     "pages/logs/logs",
     "pages/addcar/addcar",
@@ -9,8 +8,12 @@
     "pages/expenditure/expenditure",
     "pages/einvoice/einvoice",
     "pages/repeatedly/repeatedly",
+    "pages/einvoiceInfoList/einvoiceInfoList",
     "pages/expendiRecord/expendiRecord",
-    "pages/einvoiceInfoList/einvoiceInfoList"
+    "pages/einvoiceInfo/einvoiceInfo",
+    "pages/carNumList/carNumList",
+    "pages/individual/individual",
+    "pages/einvoiceManage/einvoiceManage"
   ],
   "window": {
     "backgroundTextStyle": "light",
