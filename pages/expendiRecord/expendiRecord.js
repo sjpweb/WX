@@ -22,7 +22,7 @@ Page({
     showFeeRule: false,
     expenditureInfo:{
       entTimer: '2020-01-30 10:23:31',
-      parkling: '大兴停车场',
+      parkling: '大兴机场停车场',
       allMoeny: '39.00',
       discounts: '5.00',
       havePay: '15.00'

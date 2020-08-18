@@ -1,18 +1,11 @@
-// pages/repeatedly/repeatedly.js
-import {
-  checkEmail
-} from '../../utils/util.js';
+// pages/help/help.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    value: '',
-    Email: '',
-    result: false,
-    isShow: true,
-    isErrorMessage: true
+
   },
 
   /**
@@ -21,37 +14,7 @@ Page({
   onLoad: function (options) {
 
   },
-  onChange(e) {
-    this.setData({
-      value: e.detail
-    })
-  },
-  seek() {
-    this.setData({
-      result: true
-    })
-  },
-  send() {
-    const flag = checkEmail(this.data.Email);
-    this.setData({
-      isErrorMessage: flag
-    })
-  },
-  changeEmail(e) {
-    this.setData({
-      Email: e.detail
-    })
-  },
-  help() {
-    wx.navigateTo({
-      url: '../help/help'
-    })
-  },
-  goback() {
-    wx.navigateBack({//返回
-      delta: 1
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

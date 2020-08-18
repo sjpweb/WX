@@ -13,7 +13,8 @@
     "pages/einvoiceInfo/einvoiceInfo",
     "pages/carNumList/carNumList",
     "pages/individual/individual",
-    "pages/einvoiceManage/einvoiceManage"
+    "pages/einvoiceManage/einvoiceManage",
+    "pages/help/help"
   ],
   "window": {
     "backgroundTextStyle": "light",

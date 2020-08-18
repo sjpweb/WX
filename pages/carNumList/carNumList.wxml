@@ -1,8 +1,9 @@
 <!--pages/carNumList/carNumList.wxml-->
+<wxs module="filter" src="../../utils/filter.wxs"></wxs>
 <view class="container">
   <view class="car_list" wx:for="{{carNumList}}" wx:key="index" wx:if="{{carNumList.length}}">
     <view class="item">
-      {{item}}
+      {{filter.filterText(item)}}
       <van-tag  bindtap="delCar" round plain color="#66ccff">删除</van-tag>
     </view>
   </view>

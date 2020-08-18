@@ -28,9 +28,9 @@ page{
   color: #66ccff;
 }
 .container swiper .swiper-item .item .set .van-icon{
-  font-size: 24rpx;
+  font-size: 22rpx;
   position: relative;
-  top: 6rpx;
+  top: 5rpx;
 }
 .container swiper .swiper-item .item .carNum{
   font-size: 40rpx;

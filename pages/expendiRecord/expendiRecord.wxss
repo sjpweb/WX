@@ -55,6 +55,10 @@ page{
   float: right;
   color: #66ccff;
 }
+.expenditureInfo .rule van-icon{
+  position: relative;
+  top: 5rpx;
+}
 .fee_rule_title {
   font-family: PingFangSC-Medium, PingFang SC, sans-serif;
   height: 28rpx;
