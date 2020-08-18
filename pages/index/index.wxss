@@ -109,3 +109,71 @@ page{
   height: 200rpx;
   display: block;
 }
+.van-popup{
+  border-radius: 8rpx 8rpx 0 0;
+}
+.accredit{
+  padding: 40rpx 40rpx;
+}
+.accredit .title{
+  line-height: 80rpx;
+  font-size: 34rpx;
+}
+.accredit .title image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  vertical-align:middle;
+}
+.accredit .title text{
+  line-height: 80rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-left: 20rpx;
+}
+.accredit .text{
+  line-height: 100rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.accredit .userInfo{
+  border-top: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+  padding-left: 10rpx;
+  height: 100rpx;
+  position: relative;
+}
+.accredit .userInfo .photo{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+.accredit .userInfo .nickname{
+  font-size: 36rpx;
+  color:#333;
+}
+.accredit .userInfo view{
+  font-size: 24rpx;
+  margin-left: 110rpx;
+  line-height: 50rpx;
+  color:#999;
+}
+.accredit .userInfo van-icon{
+  position: absolute;
+  right: 10rpx;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+.accredit .btns{
+  margin: 40rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+.accredit .btns button{
+  width: 40% !important;
+}
+.accredit .btns .btn1{
+  color: #07c160;
+}

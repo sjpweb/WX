@@ -6,48 +6,11 @@ import {
 } from '../../utils/util.js';
 Page({
   data: {
+    userInfo: '',
     navBarHeight: app.globalData.navBarHeight,
     swiperCurrent:0,
+    show: true,
     carList: [
-      {
-        carNum: '京A88888',
-        type: 0,
-        state: 0,
-        entranceTimer: '2020年07月15日 17:00:00',
-        monthlyTimer: '2020年08月10日'
-      },
-      {
-        carNum: '京A88888',
-        type: 1,
-        state: 0,
-        entranceTimer: '2020年07月15日 17:00:00',
-        stopTimer: '0天1小时'
-      },
-      {
-        carNum: '京A88888',
-        type: 2,
-        state: 0,
-        entranceTimer: '2020年07月15日 17:00:00',
-        stopTimer: '0天1小时'
-      },
-      {
-        carNum: '京A88888',
-        type: 3,
-        state: 0,
-        entranceTimer: '2020年07月15日 17:00:00',
-        stopTimer: '0天1小时'
-      },
-      {
-        carNum: '京A88888',
-        type: 4,
-        state: 0,
-        entranceTimer: '2020年07月15日 17:00:00',
-        stopTimer: '0天1小时'
-      },
-      {
-        carNum: '京A88888',
-        state: 1,
-      },
       {
         carNum: null,
       }
@@ -120,11 +83,64 @@ Page({
           console.log(res)
           this.setData({
             userInfo: res.userInfo,
-            hasUserInfo: true
+            hasUserInfo: true,
+            show: true
           })
         }
       })
     }
+  },
+  getPhoneNumber(e) {
+    console.log(this.data.userInfo)
+    const arr = [
+      {
+        carNum: '京A88888',
+        type: 0,
+        state: 0,
+        entranceTimer: '2020年07月15日 17:00:00',
+        monthlyTimer: '2020年08月10日'
+      },
+      {
+        carNum: '京A88888',
+        type: 1,
+        state: 0,
+        entranceTimer: '2020年07月15日 17:00:00',
+        stopTimer: '0天1小时'
+      },
+      {
+        carNum: '京A88888',
+        type: 2,
+        state: 0,
+        entranceTimer: '2020年07月15日 17:00:00',
+        stopTimer: '0天1小时'
+      },
+      {
+        carNum: '京A88888',
+        type: 3,
+        state: 0,
+        entranceTimer: '2020年07月15日 17:00:00',
+        stopTimer: '0天1小时'
+      },
+      {
+        carNum: '京A88888',
+        type: 4,
+        state: 0,
+        entranceTimer: '2020年07月15日 17:00:00',
+        stopTimer: '0天1小时'
+      },
+      {
+        carNum: '京A88888',
+        state: 1,
+      }
+    ]
+    arr.push(this.data.carList)
+    // console.log(e.detail.errMsg)
+    // console.log(e.detail.iv)
+    // console.log(e.detail.encryptedData)
+    this.setData({
+      show: false,
+      carList:arr
+    })
   },
   getUserInfo: function(e) {
     app.globalData.userInfo = e.detail.userInfo

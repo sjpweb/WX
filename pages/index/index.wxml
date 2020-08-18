@@ -65,3 +65,23 @@
   <text>专属推荐</text>
   <image src="/images/rec.png" alt />
 </view>
+<van-popup
+  show="{{ show }}"
+  position="bottom"
+  bind:close="onClose"
+>
+<view class="accredit">
+   <view class="title"> <image src="../../images/logo.jpg"></image>智能停车小程序<text>申请</text></view>
+    <view class="text">获取您的个人信息及手机号码</view>
+    <view class="userInfo">
+      <open-data class="photo" type="userAvatarUrl"></open-data>
+      <view class="nickname">{{userInfo.nickName}}</view>
+      <view>个人信息</view>
+      <van-icon name="success" color="#07c160" size="30rpx"/>
+    </view>
+    <view class="btns">
+      <button class='btn1'><navigator open-type="exit" target="miniProgram">拒绝</navigator></button>
+      <button class='btn2' type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">允许</button>
+    </view>
+</view>
+</van-popup>
