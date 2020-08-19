@@ -11,9 +11,9 @@
       <view id='{{item.carNum}}' bindtap="getCarNum">
         <view class="carNum">{{filter.filterText(item.carNum)}}<van-tag plain type="primary">{{['月租','临停'][item.type]}}</van-tag><text wx:if="{{!isBacth}}">已完成</text></view>
         <view class="parking">{{filter.filterText(item.parkName)}}</view>
-        <view class="timer" wx:if="{{item.monthTimer}}">{{item.monthTimer}}</view>
-        <view class="timer" wx:if="{{item.entertimer}}">{{item.entertimer}}</view>
-        <view class="timer" wx:if="{{item.stopTimer}}">{{item.stopTimer}}</view>
+        <view class="timer" wx:if="{{item.monthTimer}}">月租时间：{{item.monthTimer}}</view>
+        <view class="timer" wx:if="{{item.entertimer}}">入场时间：{{item.entertimer}}</view>
+        <view class="timer" wx:if="{{item.stopTimer}}">停车时间：{{item.stopTimer}}</view>
         <view class="money">￥{{item.money}}</view>
         <van-checkbox
           id='{{index}}'
@@ -43,7 +43,7 @@
       <view>您已选择 <text>{{invoiceNum.length}}</text> 笔消费记录，总计 <text>￥{{money}}</text> ，是否确认开票？</view>
     </view>
     <view class="invoice_btn">
-      <van-button color="#000" plain bind:click="counter">取消</van-button>
+      <van-button color="#999" plain bind:click="counter">取消</van-button>
       <van-button color="#66ccff" bind:click="confirm">确认</van-button>
     </view>
   </van-dialog>

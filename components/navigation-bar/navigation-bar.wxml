@@ -1,7 +1,8 @@
 <!-- 自定义顶部栏 -->
 <view class="nav-bar" style="height:{{navBarHeight}}px;">
     <view bindtap="individual">
-      <open-data type="userAvatarUrl" class="portrait" style="width:{{menuHeight}}px; height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; left:{{menuRight}}px; bottom:{{menuBotton}}px;"></open-data>
+      <open-data wx:if="{{isAuthorization}}" type="userAvatarUrl" class="portrait" style="width:{{menuHeight}}px; height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; left:{{menuRight}}px; bottom:{{menuBotton}}px;"></open-data>
+      <button wx:else class='btn' type="primary" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style="width:{{menuHeight}}px;height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; left:{{menuRight}}px; bottom:{{menuBotton}}px;">登录</button>
     </view>
     <text class="title" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; bottom:{{menuBotton}}px;">智能停车小程序</text>
 </view>

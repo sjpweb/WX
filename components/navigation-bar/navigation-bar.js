@@ -1,12 +1,15 @@
 const app = getApp()
 Component({
     properties: {
-        // defaultData（父页面传递的数据）
         defaultData: {
             type: Object,
             value: {
             },
             observer: function(newVal, oldVal) {}
+        },
+        isAuthorization:{
+          type: Boolean,
+          value: false
         }
     },
     data: {
@@ -16,14 +19,20 @@ Component({
         menuBotton: app.globalData.menuBotton,
         menuHeight: app.globalData.menuHeight,
     },
-    attached: function() {
-
-    },
     methods: {
       individual(){
+        if(!this.properties.isAuthorization) return;
         wx.navigateTo({
           url: '../individual/individual'
         })
-      }
+      },
+      bindGetUserInfo(e) {
+        if(e.detail.errMsg ===  "getUserInfo:ok"){
+          this.setData({
+            isAuthorization: true
+          });
+          this.triggerEvent('getAuthorization',e)
+        }
+      },
     }
 })

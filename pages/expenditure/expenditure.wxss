@@ -11,6 +11,7 @@
   background-color: #f0f3f6;
   z-index: 10;
 }
+button{width: 100%!important;}
 .expenditureHead .right{
   float: right;
 }
@@ -100,6 +101,9 @@
 .invoice_btn{
   display: flex;
   justify-content: space-between;
+}
+.invoice_btn .van-hairline--top:after{
+  border: none;
 }
 .invoice_btn .van-button--normal{
   padding: 0 70rpx !important;
