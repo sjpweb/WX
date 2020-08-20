@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <wxs module="filter" src="../../utils/filter.wxs"></wxs>
-<navigation-bar isAuthorization="{{isAuthorization}}" bind:getUserInfo="getAuthorization"></navigation-bar>
+<navigation-bar isAuthorization="{{isAuthorization}}" bind:getAuthorization="getAuthorization"></navigation-bar>
 <view class="container" style="margin-top:{{navBarHeight}}px">
   <van-search
    disabled

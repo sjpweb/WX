@@ -9,8 +9,7 @@ Page({
     userInfo: '',
     navBarHeight: app.globalData.navBarHeight,
     swiperCurrent:0,
-    isAuthorization: false,
-    show: true,
+    isAuthorization: false,   //默认未授权
     carList: [
       {
         carNum: null,
@@ -23,25 +22,48 @@ Page({
     duration: 500,
     value: '',
   },
-  addCar() {
-    wx.navigateTo({
-      url: '../addcar/addcar'
+  showToast(){
+    wx.showToast({
+      title: '请点击左上角授权登录',
+      icon: 'none',
+      duration: 2000
     })
+  },
+  addCar() {
+    if(this.data.isAuthorization){
+      wx.navigateTo({
+        url: '../addcar/addcar'
+      })
+      return;
+    }
+    this.showToast();
   },
   search() {
-    wx.navigateTo({
-      url: '../search/search'
-    })
+    if(this.data.isAuthorization){
+      wx.navigateTo({
+        url: '../search/search'
+      })
+      return;
+    }
+    this.showToast();
   },
   pay() {
-    wx.navigateTo({
-      url: '../pay/pay?carNum='+1
-    })
+    if(this.data.isAuthorization){
+      wx.navigateTo({
+        url: '../pay/pay?carNum='+1
+      })
+      return;
+    }
+    this.showToast();
   },
   goExpenditure() {
-    wx.navigateTo({
-      url: '../expenditure/expenditure'
-    })
+    if(this.data.isAuthorization){
+      wx.navigateTo({
+        url: '../expenditure/expenditure'
+      })
+      return;
+    }
+    this.showToast();
   },
   onSearch: function(e) {
     this.setData({
@@ -53,14 +75,9 @@ Page({
       swiperCurrent: e.detail.current
     })
   },
-  onCancel: function(e) {
-    this.setData({
-      value: ""
-    });
-  },
   onLoad: function () {
     let that = this;
-    //进入小程序，若已经授权则自动登录
+    //进入小程序，若已经授权则自动获取用户信息
     wx.getSetting({
       success(res) {
         if (res.authSetting['scope.userInfo']) {
@@ -117,11 +134,25 @@ Page({
     ]
     arr.push(this.data.carList)
     this.setData({
-      show: false,
       carList:arr
     })
   },
-  getAuthorization(e) {
+  getAuthorization(e) {  // 用户授权触发
+    this.setData({
+      isAuthorization: true
+    })
+    const {detail:{detail:{encryptedData,iv}}} = e;
+    wx.login({
+      success: res => {
+        const code = res.code;
+        const param = {
+          encryptedData: encryptedData,
+          iv: iv,
+          code: code
+        }
+        console.log(param)
+      }
+    })
     this.getUserInfo();
   },
   autoLogin() {
@@ -138,6 +169,7 @@ Page({
               iv: res.iv,
               code: code
             }
+            console.log(param);
             that.getUserInfo();
           },
           fail: function(res) {
